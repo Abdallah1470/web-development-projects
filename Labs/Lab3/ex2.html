@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Column Layout</title>
+    <style>
+      /* making a three column layout */
+
+      main {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100px;
+      }
+
+      .column {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .column1 {
+        /* width takes 20% of the flex container */
+        width: 20%;
+        background-color: orange;
+      }
+
+      .column2 {
+        /* width takes 60% of the flex container */
+        width: 60%;
+        background-color: yellow;
+      }
+
+      .column3 {
+        /* width takes 20% of the flex container */
+        width: 20%;
+        background-color: greenyellow;
+      }
+
+      header,
+      footer {
+        background-color: pink;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>HEADER</header>
+    <main>
+      <div class="column column1">
+        <p>COLUMN 1</p>
+      </div>
+      <div class="column column2">
+        <p>COLUMN 2</p>
+      </div>
+      <div class="column column3">
+        <p>COLUMN 3</p>
+      </div>
+    </main>
+    <footer>FOOTER</footer>
+  </body>
+</html>

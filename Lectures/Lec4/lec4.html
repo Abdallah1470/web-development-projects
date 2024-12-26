@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec4</title>
+    <style>
+        .ex3 {
+            p.dotted {
+                border-style: dotted;
+            }
+
+            p.dashed {
+                border-style: dashed;
+            }
+
+            p.solid {
+                border-style: solid;
+            }
+
+            p.double {
+                border-style: double;
+            }
+
+            p.groove {
+                border-style: groove;
+            }
+
+            p.ridge {
+                border-style: ridge;
+            }
+
+            p.inset {
+                border-style: inset;
+            }
+
+            p.outset {
+                border-style: outset;
+            }
+
+            p.none {
+                border-style: none;
+            }
+
+            p.hidden {
+                border-style: hidden;
+            }
+
+            p.mix {
+                border-style: dotted dashed solid double;
+            }
+        }
+
+        .ex4 {
+            p.one {
+                border-style: solid;
+                border-color: red;
+            }
+
+            p.two {
+                border-style: solid;
+                border-color: green;
+            }
+
+            p.three {
+                border-style: dotted;
+                border-color: blue;
+            }
+        }
+
+        .ex5 {
+            h1 {
+                text-shadow: 2px 2px red;
+            }
+        }
+
+        .ex6 {
+            div {
+                width: 300px;
+                height: 100px;
+                padding: 15px;
+                background-color: blue;
+                box-shadow: 10px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ex1">
+        <h1>HSL Lightness</h1>
+        <p>The third parameter of hsl() defines the lightness. 0% means black, and 100% means white:</p>
+        <h2 style="background-color:hsl(0, 100%, 0%);">hsl(0, 100%, 0%)</h2>
+        <h2 style="background-color:hsl(0, 100%, 25%);">hsl(0, 100%, 25%)</h2>
+        <h2 style="background-color:hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</h2>
+        <h2 style="background-color:hsl(0, 100%, 75%);">hsl(0, 100%, 75%)</h2>
+        <h2 style="background-color:hsl(0, 100%, 90%);">hsl(0, 100%, 90%)</h2>
+        <h2 style="background-color:hsl(0, 100%, 100%);">hsl(0, 100%, 100%)</h2>
+        <hr>
+    </div>
+
+    <div class="ex2">
+        <p style="color:#FF6347;">First paragraph</p>
+        <p style="color:#1E90FF;">Second paragraph</p>
+        <p style="color:#3CB371;">Third paragraph</p>
+        <hr>
+    </div>
+
+    <div class="ex3">
+        <h2>The border-style Property</h2>
+        <p>This property specifies what kind of border to display:</p>
+        <p class="dotted">A dotted border.</p>
+        <p class="dashed">A dashed border.</p>
+        Page 9 of 15
+        <p class="solid">A solid border.</p>
+        <p class="double">A double border.</p>
+        <p class="groove">A groove border.</p>
+        <p class="ridge">A ridge border.</p>
+        <p class="inset">An inset border.</p>
+        <p class="outset">An outset border.</p>
+        <p class="none">No border.</p>
+        <p class="hidden">A hidden border.</p>
+        <p class="mix">A mixed border.</p>
+        <hr>
+    </div>
+
+    <div class="ex4">
+        <h2>The border-color Property</h2>
+        <p>This property specifies the color of the four borders:</p>
+        <p class="one">A solid red border</p>
+        <p class="two">A solid green border</p>
+        <p class="three">A dotted blue border</p>
+        <p><b>Note:</b> The "border-color" property does not work if it is used alone. Use the "border-style" property
+            to set
+            the borders first.</p>
+        <hr>
+    </div>
+
+    <div class="ex5">
+        <h1>text shadow effect</h1>
+        <hr>
+    </div>
+
+    <div class="ex6">
+        <h1>The box-shadow Property</h1>
+        <div>This is a div element with a box-shadow</div>
+        <hr>
+    </div>
+
+
+
+</body>
+
+</html>

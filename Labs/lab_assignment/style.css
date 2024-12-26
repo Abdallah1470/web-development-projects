@@ -1,0 +1,146 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background-color: #333333;
+  width: 260px;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.display {
+  background-color: #222222;
+  color: #6e7575;
+  text-align: right;
+  padding: 16px;
+  font-size: larger;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.button {
+  color: white;
+  aspect-ratio: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  font-size: larger;
+  border-radius: 8px;
+}
+
+.button.number {
+  background-color: #555555;
+}
+
+.button.operator {
+  background-color: #f5a623;
+}
+
+.button.equal {
+  background-color: #4caf50;
+}
+
+.button.clear {
+  background-color: #d9534f;
+  grid-column: span 4;
+  aspect-ratio: 6;
+  margin-top: 12px;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+.button:active {
+  animation: scale 0.15s;
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 16px;
+  left: 16px;
+  background-color: wheat;
+  border-radius: 16px;
+  padding: 16px;
+  width: 200px;
+  height: 100px;
+}
+
+.card p {
+  margin: 0;
+  font-size: large;
+  font-weight: 500;
+  color: #333333;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.card:hover {
+  animation: fill 0.75s forwards;
+}
+
+.card:hover ~ .card {
+  animation-play-state: running;
+}
+
+.card:not(:hover).was-hovered {
+  animation: unfill 0.75s forwards;
+}
+
+@keyframes fill {
+  0% {
+    width: 200px;
+    height: 100px;
+    margin: 0;
+  }
+  100% {
+    width: 90vw;
+    height: 80vh;
+    margin: 32px;
+    border-radius: 16px;
+  }
+}
+
+@keyframes unfill {
+  0% {
+    width: 90vw;
+    height: 80vh;
+    margin: 32px;
+    border-radius: 16px;
+  }
+  100% {
+    width: 200px;
+    height: 100px;
+    margin: 0;
+  }
+}

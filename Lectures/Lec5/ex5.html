@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+
+        div:hover {
+            animation-name: animate-background;
+            animation-duration: 5s;
+        }
+
+        @keyframes animate-background {
+            0% {
+                background-color: orange;
+            }
+
+            100% {
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <p>Hover above div to see animation.</p>
+</body>
+
+</html>

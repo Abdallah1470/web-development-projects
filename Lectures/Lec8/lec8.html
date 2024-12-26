@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>JavaScript Functions</h1>
+    <p>Call a function which performs a calculation and returns the result:</p>
+    <script>
+        let x = myFunction(5, 4);
+        document.write(x);
+        function myFunction(a, b) {
+            return a * b;
+        } 
+    </script>
+
+    <h2>JavaScript if .. else</h2>
+    <p>A time-based greeting:</p>
+    <script>
+        const hour = new Date().getHours();
+        let greeting;
+        if (hour < 18) {
+            greeting = "Good day";
+        } else {
+            greeting = "Good evening";
+        }
+        document.write(greeting); 
+    </script>
+
+    <h2>JavaScript switch</h2>
+    <script>
+        let day;
+        switch (new Date().getDay()) {
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+        }
+        document.write("Today is " + day); 
+    </script>
+
+    <h2>JavaScript For Loop</h2>
+    <script>
+        let text = "";
+        for (let i = 0; i < 5; i++) {
+            text += "The number is " + i + "<br>";
+        }
+        document.write(text); 
+    </script>
+
+    <h2>JavaScript For In Loop</h2>
+    <p>The for in statement loops through the properties of an object:</p>
+    <p id="demo"></p>
+
+    <script>
+        const person = { fname: "Adel", lname: "Salem", age: 25 };
+        let name = "";
+        for (let x in person) {
+            name += person[x] + " ";
+        }
+        document.write(name); 
+    </script>
+
+    <h2>JavaScript For Of Loop</h2>
+    <p>The for of statement loops through the values of any iterable object:</p>
+
+    <p id="demo"></p>
+
+    <script>
+        const cars = ["BMW", "Volvo", "Mini"];
+
+        let car = "";
+        for (let x of cars) {
+            car += x + "<br>";
+        }
+
+        document.write(car); 
+    </script>
+
+    <h2>JavaScript For Of Loop</h2>
+    <p>The for of statement loops through the values of an iterable object.</p>
+    <script>
+        let language = "JavaScript";
+        let lang = "";
+        for (let x of language) {
+            lang += x + "<br>";
+        }
+        document.write(lang); 
+    </script>
+
+    <h2>JavaScript While Loop</h2>
+    <script>
+        let num = "";
+        let i = 0;
+        while (i < 10) {
+            num += "<br>The number is " + i;
+            i++;
+        }
+        document.write(num); 
+    </script>
+
+    <h1>JS BOM</h1>
+    <p>The document object can be accessed through the window object.</p>
+    <script>
+        document.write(window.document.location); 
+    </script>
+
+    <h1>JavaScript Width And Height</h1>
+    <p id="wid"></p>
+    <script>
+        var demo = document.getElementById('wid');
+        let w = window.innerWidth;
+        let h = window.innerHeight;
+        wid.innerHTML = 'width: ' + w + '<br>' + 'height: ' + h; 
+    </script>
+
+    <h2>Javascript Events</h2>
+    <script language="Javascript" type="text/Javascript">
+    function clickevent()   
+    {   
+        document.write("This is Java*******point");   
+    }   
+    //-->   
+</script>
+    <form>
+        <input type="button" onclick="clickevent()" value="Who's this?" />
+    </form>
+
+
+    <h2> Javascript Events </h2>
+    <script language="Javascript" type="text/Javascript">
+    function mouseoverevent()   
+    {   
+        alert("This is Java******point");   
+    }   
+    //-->   
+</script>
+    <p onmouseover="mouseoverevent()"> Keep cursor over me</p>
+
+
+    <h2> Enter something here</h2>
+    <input type="text" id="input1" onfocus="focusevent()" />
+    <script>
+        function focusevent() {
+            document.getElementById("input1").style.background = " aqua";
+        }
+        //-->   
+    </script>
+
+
+</body>
+
+</html>

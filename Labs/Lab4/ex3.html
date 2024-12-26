@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            transform: translate(50%, 50%);
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            line-height: 6.5;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: -3px solid #ccc;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        div::before {
+            content: "";
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            position: absolute;
+            left: -9px;
+            top: -10px;
+            z-index: -2;
+            border-right: 10px solid black;
+            border-top: 10px solid black;
+            border-bottom: 10px solid black;
+            border-left: 10px solid white;
+            transition: 0.5s;
+        }
+
+        div::after {
+            content: "";
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            position: absolute;
+            left: -18px;
+            top: -20px;
+            z-index: -3;
+            border-left: 10px solid red;
+            border-top: 10px solid red;
+            border-bottom: 10px solid red;
+            border-right: 10px solid white;
+            transition: 0.5s;
+        }
+
+        div:hover::before {
+            transform: rotate(180deg);
+        }
+
+        div:hover::after {
+            transform: rotate(-180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div>Sheet</div>
+</body>
+
+</html>

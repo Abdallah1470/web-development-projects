@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lec6</title>
+    <style>
+        .ex1 {
+            input {
+                width: 100%;
+                padding: 10px;
+                margin: 10px 0;
+                border: 2px solid #ccc;
+                border-radius: 5px;
+                background-color: #f9f9f9;
+                color: #333;
+                font-size: 16px;
+                box-sizing: border-box;
+            }
+
+            input:focus {
+                border-color: #66afe9;
+                outline: none;
+                box-shadow: 0 0 5px rgba(102, 175, 233, 0.5);
+                background-color: #fff;
+            }
+        }
+
+        .ex2 {
+            input {
+                width: 100%;
+                box-sizing: border-box;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                background-image:
+                    url('https://img.icons8.com/?size=100&id=kDqO6kPb3xLj&format=png&color=000000');
+                background-repeat: no-repeat;
+                padding: 12px 20px 12px 40px;
+                background-size: 40px 40px;
+            }
+        }
+
+        .ex3 {
+            input {
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                padding: 12px 20px;
+                transition: all 0.9s ease;
+            }
+
+            input:focus {
+                border-color: dodgerblue;
+                width: 70%;
+                box-shadow:
+                    0 0 8px 0 rgba(0, 0, 255, 0.2);
+            }
+        }
+
+        .ex4 {
+            textarea {
+                width: 100%;
+                height: 100px;
+                font-size: 16px;
+                color: #938b8b;
+                padding: 15px;
+                border: 2px solid;
+            }
+
+            textarea:focus {
+                box-shadow:
+                    0 0 10px rgba(0, 0, 0, 0.5);
+            }
+        }
+
+        .ex5 {
+            label {
+                font-size: 16px;
+            }
+
+            #styled-select {
+                width: 200px;
+                padding: 10px;
+                font-size: 16px;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+            }
+
+            #styled-select:focus {
+                border-color: #007BFF;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+                outline: none;
+            }
+        }
+
+        .ex6 {
+            form {
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+
+            label {
+                font-weight: bold;
+                margin-top: 10px;
+                display: block;
+            }
+
+            input[type="radio"],
+            input[type="checkbox"] {
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+
+            /* '+' is Adjacent Sibling Selectors */
+            input[type="radio"]+label,
+            input[type="checkbox"]+label {
+                display: inline-block;
+                margin-right: 10px;
+            }
+
+            /* Change color of checked option */
+            input[type="radio"]:checked+label,
+            input[type="checkbox"]:checked+label {
+                color: #007BFF;
+            }
+        }
+
+        .ex7 {
+            .styled-button {
+                padding: 10px 20px;
+                font-size: 16px;
+                color: white;
+                background-color: #007BFF;
+                border: none;
+                border-radius: 5px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+
+            .styled-button:hover {
+                background-color: #0056b3;
+            }
+
+            .styled-button:active {
+                transform: scale(0.5);
+            }
+
+            .styled-button:focus {
+                outline: none;
+                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+            }
+        }
+
+        .ex8 {
+            fieldset {
+                padding: 10px;
+            }
+
+            legend {
+                font-weight: bold;
+                color: #0F8D0F;
+                margin-bottom: 10px;
+            }
+
+            input {
+                width: calc(100% - 20px);
+                padding: 8px;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+        }
+
+        .ex9 {
+            .container {
+                max-width: 400px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #c5e08e;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+                color: #34892b;
+            }
+
+            label {
+                display: block;
+                font-weight: bold;
+                font-size: 15px;
+                margin-bottom: 5px;
+                color: #070707;
+            }
+
+            input[type="text"],
+            input[type="email"],
+            select {
+                width: 90%;
+                padding: 15px;
+                margin-bottom: 15px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                background-color: #eff5f5;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #216e2a;
+                color: #fff;
+                border: none;
+                font-size: 20px;
+
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            textarea {
+                width: 90%;
+                height: 100px;
+                padding: 15px;
+                margin-bottom: 15px;
+                border: 2px solid #ccc;
+                border-radius: 10px;
+                background-color: #eff5f5;
+            }
+
+            input[type="radio"] {
+                margin-right: 5px;
+                vertical-align: middle;
+                margin-bottom: 10px;
+            }
+
+            input[type="submit"]:hover {
+                background-color: #44d115;
+                color: #000000;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ex1">
+        <h3>Styled Input Tags</h3>
+        Name:
+        <input type="text">
+        Email:
+        <input type="email">
+        Password:
+        <input type="password">
+        <hr>
+    </div>
+
+    <div class="ex2">
+        <h2>Input field with an icon inside</h2>
+        <input type="text" placeholder="Search..">
+        <hr>
+    </div>
+
+    <div class="ex3">
+        <h2>Animated Input Field</h2>
+        <input type="text" placeholder="Enter your text...">
+        <hr>
+    </div>
+
+    <div class="ex4">
+        Enter Address
+        <form>
+            <textarea>
+Address
+</textarea>
+        </form>
+        <hr>
+    </div>
+
+    <div class="ex5">
+        <label> Choose an option: </label>
+        <select id="styled-select">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <hr>
+    </div>
+
+    <div class="ex6">
+        <form>
+            <label>Radio Buttons: </label>
+            <input type="radio" name="gender" value="male">
+
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female">
+            <label for="female">Female</label>
+            <br>
+            <label>Checkboxes:</label>
+            <input type="checkbox" name="lang" value="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" name="lang" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" name="lang" value="bootstrap">
+            <label for="html">bootstrap</label>
+        </form>
+        <hr>
+    </div>
+
+    <div class="ex7">
+        <button class="styled-button">
+            Click Me
+        </button>
+        <hr>
+    </div>
+
+    <div class="ex8">
+        <form>
+            <fieldset>
+                <legend>Login</legend>
+                <label for="username">
+                    Username:
+                </label>
+                <input type="text" id="username" name="username">
+                <label for="password">
+                    Password:
+                </label>
+                <input type="password" id="password" name="password">
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
+        <hr>
+    </div>
+
+    <div class="ex9">
+        <div class="container">
+            <h1>Registration Form</h1>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Name..." required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email Id..." required>
+                <label for="email">Address:</label>
+                <textarea>Address...</textarea>
+                <label>Gender: </label>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+
+                <label for="gender">Langauges:</label>
+                <select id="gender" name="gender">
+                    <option value="lang" disabled selected>Select Gender</option>
+                    <option value="male">Egyptian</option>
+                    <option value="female">British</option>
+                    <option value="male">Canadian</option>
+                </select>
+                <input type="submit" value="Submit">
+            </form>
+            <hr>
+        </div>
+</body>
+
+</html>
